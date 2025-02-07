@@ -1,0 +1,27 @@
+name: Number Generator
+
+on:
+  schedule:
+    - cron: "0 0 * * 0" # 매주 일요일 자정에 실행 (UTC 기준)
+
+jobs:
+  generate-lotto-numbers:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run number generator
+        run: node index.js
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
