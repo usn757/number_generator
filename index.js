@@ -1,7 +1,7 @@
 async function makeIssue() {
   const token = process.env.GH_TOKEN;
   const OWNER = "usn757"; // GitHub 계정 이름
-  const REPO = ""; // GitHub 저장소 이름
+  const REPO = "number_generator"; // GitHub 저장소 이름
 
   // 1~45의 숫자 중 6개 랜덤 생성
   function generateNumbers() {
