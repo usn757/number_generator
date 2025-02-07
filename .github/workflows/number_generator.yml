@@ -1,11 +1,12 @@
 name: Number Generator
-
+run-name: ${{ github.actor }} is testing out GitHub Actions
 on:
+  workflow_dispatch::
   schedule:
     - cron: "0 0 * * 0" # 매주 일요일 자정에 실행 (UTC 기준)
 
 jobs:
-  generate-lotto-numbers:
+  make-issue:
     runs-on: ubuntu-latest
     permissions:
       issues: write
