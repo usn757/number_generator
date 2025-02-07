@@ -1,5 +1,5 @@
 name: Number Generator
-run-name: ${{ github.actor }} is testing out GitHub Actions
+run-name: ${{ github.actor }} is write issue
 on:
   workflow_dispatch:
   schedule:
