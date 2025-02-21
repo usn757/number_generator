@@ -22,6 +22,8 @@ async function makeIssue() {
       method: "POST",
       headers: {
         Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+        "X-GitHub-Api-Version": "2022-11-28",
       },
       body: JSON.stringify({
         title: "이번 주 번호 추천",
