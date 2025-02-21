@@ -29,11 +29,11 @@ async function makeIssue() {
       }),
     }
   );
-
+  
   if (response.ok) {
     console.log("성공");
   } else {
-    console.log("실패");
+    console.log("실패:", response.status, response.statusText);
   }
 }
 
