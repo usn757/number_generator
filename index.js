@@ -3,12 +3,14 @@ async function makeIssue() {
   const OWNER = "usn757"; // GitHub 계정 이름
   const REPO = "number_generator"; // GitHub 저장소 이름
 
+  console.log("makeIssue()");
   // 1~45의 숫자 중 6개 랜덤 생성
   function generateNumbers() {
     const numbers = new Set();
     while (numbers.size < 6) {
       numbers.add(Math.floor(Math.random() * 45) + 1);
     }
+    console.log("generateNumbers()");
     return Array.from(numbers).join(", ");
   }
 
@@ -35,4 +37,5 @@ async function makeIssue() {
   }
 }
 
+console.log("index.js");
 makeIssue();
